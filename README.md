@@ -11,12 +11,10 @@ Written by[Yaron Sumel](http://sumel.me).
 ## Usage
 
 ```go
-    import "github.com/yaronsumel/abFeatures"
-```
 
-## Set a new Feature
+    	import "github.com/yaronsumel/abFeatures"
 
-```go
+	//Set a new Test Feature
 	abFeatures.SetNewFeature(&abFeatures.TestFeature{
 	// feature id
 		TestId:2,
