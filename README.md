@@ -21,8 +21,6 @@ const NEW_HOME_PAGE_FEATURE = 1
 		TestId:NEW_HOME_PAGE_FEATURE,
 	// chance is a number to rand between
 		Chance:100,
-	// unix timestamp of test expiration
-		ExpireAt:1000,
 	// max-age of each test Cookie
 		CookieMaxAge:100,
     	// is the feature active

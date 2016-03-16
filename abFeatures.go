@@ -20,7 +20,7 @@ type TestFeature struct {
 	// chance is a number to rand between
 	Chance		int
 	// unix timestamp of test expiration
-	ExpireAt	int64
+	//ExpireAt	int64
 	// max-age of each test Cookie
 	// MaxAge=0 means no 'Max-Age' attribute specified.
 	// MaxAge<0 means delete cookie now
@@ -144,7 +144,7 @@ func (f *TestFeature)getTestIdUrlParam(r *http.Request)string{
 
 //
 func (f *TestFeature)isValid()bool{
-	return f.Active && f.ExpireAt > time.Now().Unix()
+	return f.Active /*&& f.ExpireAt > time.Now().Unix()*/
 }
 
 //
