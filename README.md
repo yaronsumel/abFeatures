@@ -33,7 +33,7 @@ Written by[Yaron Sumel](http://sumel.me).
 ## Check a Feature
 
 ```go
-	if abFeatures.HasFeature(2,&http.ResponseWriter,&http.Request}){
+	if abFeatures.HasFeature(2,&http.ResponseWriter,&http.Request){
 		// user got the test feature !!
 	}
 ```
