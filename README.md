@@ -12,12 +12,13 @@ Written by[Yaron Sumel](http://sumel.me).
 
 ```go
 
-    import "github.com/yaronsumel/abFeatures"
+import "github.com/yaronsumel/abFeatures"
+const NEW_HOME_PAGE_FEATURE = 1
 
 	//Set a new Test Feature
 	abFeatures.SetNewFeature(&abFeatures.TestFeature{
 	// feature id
-		TestId:2,
+		TestId:NEW_HOME_PAGE_FEATURE,
 	// chance is a number to rand between
 		Chance:100,
 	// unix timestamp of test expiration
@@ -33,7 +34,7 @@ Written by[Yaron Sumel](http://sumel.me).
 ## Check a Feature
 
 ```go
-	if abFeatures.HasFeature(2,&http.ResponseWriter,&http.Request){
+	if abFeatures.HasFeature(NEW_HOME_PAGE_FEATURE,&http.ResponseWriter,&http.Request){
 		// user got the test feature !!
 	}
 ```
