@@ -12,7 +12,7 @@ Written by[Yaron Sumel](http://sumel.me).
 
 ```go
 
-    	import "github.com/yaronsumel/abFeatures"
+    import "github.com/yaronsumel/abFeatures"
 
 	//Set a new Test Feature
 	abFeatures.SetNewFeature(&abFeatures.TestFeature{
