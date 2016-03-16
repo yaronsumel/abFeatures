@@ -2,7 +2,7 @@
 
 abFeatures allows you to create and check features in your web projects.
 
-Written by[Yaron Sumel](http://sumel.me).
+Written by [Yaron Sumel](http://sumel.me).
 
 ## Install
 

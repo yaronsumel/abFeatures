@@ -14,6 +14,8 @@ var version = "_V1"
 var param_name = "tid"
 var cookie_name = "T_"
 
+const version_prefix = "_V"
+
 type TestFeature struct {
 	// feature id
 	TestId 		int
@@ -30,8 +32,6 @@ type TestFeature struct {
 	Active		bool
 }
 
-type abTest struct {}
-
 // set new test feature
 // if expireAt is zero , its means it will never expire
 func SetNewFeature(feature *TestFeature){
@@ -40,7 +40,7 @@ func SetNewFeature(feature *TestFeature){
 
 // set a new version
 func SetVersion(v int){
-	version = "_^V"+strconv.Itoa(v)
+	version = version_prefix+strconv.Itoa(v)
 }
 
 // get current version
@@ -111,10 +111,10 @@ func (f *TestFeature)setTestCookie(w *http.ResponseWriter)bool{
 
 //
 func (f *TestFeature)isLuckyUser()bool{
-	if f.Chance <= 0{
+	if f.Chance <= 1{
 		return true
 	}
-	return random(0,f.Chance) == 0
+	return random(1,f.Chance) == 1
 }
 
 
