@@ -144,7 +144,7 @@ func (f *TestFeature)getTestIdUrlParam(r *http.Request)string{
 
 //
 func (f *TestFeature)isValid()bool{
-	return f.Active && f.ExpireAt < time.Now().Unix()
+	return f.Active && f.ExpireAt > time.Now().Unix()
 }
 
 //
